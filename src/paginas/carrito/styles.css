@@ -48,3 +48,9 @@ cursor: pointer;
 .carrito__eliminar svg:hover{
     fill: rgb(234, 94, 94);
 }
+/* responsive */
+@media (max-width: 700px){
+    .carrito-item{
+        width: 90%;
+    }
+}

@@ -16,3 +16,13 @@
     text-align: center;
     color: var(--text-300);
 }
+
+/* responsive */
+@media (max-width: 700px){
+    .banner{
+        height: 150px;
+    }
+   .banner__descripcion{
+    display: none;
+   }
+}
