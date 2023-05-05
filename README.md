@@ -1,6 +1,6 @@
 # **>Trabajo final< 🧑‍🎓** 
 ## **Tienda sport center**
-[Ir a tienda → ](https://portafolio-buho.vercel.app/)
+[Ir a tienda → ](https://sport-center.vercel.app/)
 
 ![Primer Diseno](./screenshots/1.png)
 
