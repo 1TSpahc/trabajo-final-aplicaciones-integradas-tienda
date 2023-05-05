@@ -1,97 +1,37 @@
+import { useState } from 'react'
+import { CarritoItem } from '../../componentes/carritoItem'
 import { Subtitulo } from '../../componentes/subtitulos'
+import { obtenerDelLocalStorage } from '../../utils'
 import './styles.css'
 
+import { AnimatePresence, motion } from 'framer-motion'
+
 export function Carrito () {
+  const [carritoItems, setCarritoItems] = useState(() => {
+    return JSON.parse(obtenerDelLocalStorage('carrito')) ?? []
+  })
+
   return (
-    <section className='seccion-carrito'>
-      <Subtitulo>Tu Carrito</Subtitulo>
+    <>
+      <motion.section className='seccion-carrito' initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }}>
+        <Subtitulo>{carritoItems.length === 0 ? 'Tu carrito esta vacio' : 'Tu carrito'}</Subtitulo>
+        <AnimatePresence>
+          {
+            carritoItems && (
+              <div className='carrito-productos'>
+                {
+                    carritoItems.map((itemId) => {
+                      return (
+                        <CarritoItem key={itemId} actualizarCarrito={setCarritoItems} carritoItems={carritoItems} productoId={itemId} />
+                      )
+                    })
+                }
+              </div>
 
-      <div className='carrito-productos'>
-        <div className='carrito-item'>
-          <div className='carrito__producto producto'>
-            <img src='http://res.cloudinary.com/de5nialrr/image/upload/v1683176379/buhoportfolio/fgwlhpr1gnnuuusjpyel.jpg' alt='' className='producto__img' />
-            <div>
-              <h4>titulo</h4>
-              <span>s/20.00</span>
-            </div>
-          </div>
-          <button>ELiminar</button>
-        </div>
-
-        <div className='carrito-item'>
-          <div className='carrito__producto producto'>
-            <img src='http://res.cloudinary.com/de5nialrr/image/upload/v1683176379/buhoportfolio/fgwlhpr1gnnuuusjpyel.jpg' alt='' className='producto__img' />
-            <div>
-              <h4>titulo</h4>
-              <span>s/20.00</span>
-            </div>
-          </div>
-          <button>ELiminar</button>
-        </div>
-
-        <div className='carrito-item'>
-          <div className='carrito__producto producto'>
-            <img src='http://res.cloudinary.com/de5nialrr/image/upload/v1683176379/buhoportfolio/fgwlhpr1gnnuuusjpyel.jpg' alt='' className='producto__img' />
-            <div>
-              <h4>titulo</h4>
-              <span>s/20.00</span>
-            </div>
-          </div>
-          <button>ELiminar</button>
-        </div>
-
-        <div className='carrito-item'>
-          <div className='carrito__producto producto'>
-            <img src='http://res.cloudinary.com/de5nialrr/image/upload/v1683176379/buhoportfolio/fgwlhpr1gnnuuusjpyel.jpg' alt='' className='producto__img' />
-            <div>
-              <h4>titulo</h4>
-              <span>s/20.00</span>
-            </div>
-          </div>
-          <button>ELiminar</button>
-        </div>
-        <div className='carrito-item'>
-          <div className='carrito__producto producto'>
-            <img src='http://res.cloudinary.com/de5nialrr/image/upload/v1683176379/buhoportfolio/fgwlhpr1gnnuuusjpyel.jpg' alt='' className='producto__img' />
-            <div>
-              <h4>titulo</h4>
-              <span>s/20.00</span>
-            </div>
-          </div>
-          <button>ELiminar</button>
-        </div>
-        <div className='carrito-item'>
-          <div className='carrito__producto producto'>
-            <img src='http://res.cloudinary.com/de5nialrr/image/upload/v1683176379/buhoportfolio/fgwlhpr1gnnuuusjpyel.jpg' alt='' className='producto__img' />
-            <div>
-              <h4>titulo</h4>
-              <span>s/20.00</span>
-            </div>
-          </div>
-          <button>ELiminar</button>
-        </div>
-        <div className='carrito-item'>
-          <div className='carrito__producto producto'>
-            <img src='http://res.cloudinary.com/de5nialrr/image/upload/v1683176379/buhoportfolio/fgwlhpr1gnnuuusjpyel.jpg' alt='' className='producto__img' />
-            <div>
-              <h4>titulo</h4>
-              <span>s/20.00</span>
-            </div>
-          </div>
-          <button>ELiminar</button>
-        </div>
-        <div className='carrito-item'>
-          <div className='carrito__producto producto'>
-            <img src='http://res.cloudinary.com/de5nialrr/image/upload/v1683176379/buhoportfolio/fgwlhpr1gnnuuusjpyel.jpg' alt='' className='producto__img' />
-            <div>
-              <h4>titulo</h4>
-              <span>s/20.00</span>
-            </div>
-          </div>
-          <button>ELiminar</button>
-        </div>
-
-      </div>
-    </section>
+            )
+        }
+        </AnimatePresence>
+      </motion.section>
+    </>
   )
 }

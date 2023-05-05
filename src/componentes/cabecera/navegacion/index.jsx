@@ -1,18 +1,22 @@
 import { Link } from 'wouter'
+import { IconoCasa, IconoTienda, IconoCarrito } from '../../iconos'
 
 export function Navegacion () {
   const enlaces = [
     {
+      icono: IconoCasa,
       texto: 'Inicio',
       url: '/'
     },
 
     {
+      icono: IconoTienda,
       texto: 'Tienda',
       url: '/tienda'
     },
 
     {
+      icono: IconoCarrito,
       texto: 'Carrito',
       url: '/carrito'
     }
@@ -24,7 +28,12 @@ export function Navegacion () {
         {
             enlaces.map((enlace, index) => {
               return (
-                <li key={index} className='navegacion__elemento'><Link href={enlace.url} className='navegacion__enlace'>{enlace.texto}</Link></li>
+                <li key={index} className='navegacion__elemento'>
+                  <Link href={enlace.url} className='navegacion__enlace'>
+                    <enlace.icono />
+                    {enlace.texto}
+                  </Link>
+                </li>
               )
             })
         }

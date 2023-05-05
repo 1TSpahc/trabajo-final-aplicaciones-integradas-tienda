@@ -5,6 +5,9 @@
     height: calc(100vh - 70px);
     overflow-y: scroll;
 }
+.seccion-carrito::-webkit-scrollbar{
+width: 0;
+}
 .carrito-productos{
     padding-top: 20px;
 }
@@ -27,4 +30,16 @@
 }
 .producto__img{
     width: 60px;
+}
+.carrito__eliminar {
+cursor: pointer;
+}
+.carrito__eliminar svg{
+    width: 40px;
+    fill: var(--text-200);
+    transition: .2s
+;
+}
+.carrito__eliminar svg:hover{
+    fill: rgb(234, 94, 94);
 }

@@ -37,8 +37,17 @@
 .navegacion__enlace{
     text-decoration: none;
     color: var(--text-200);
-    transition: color .3s;
+    fill: var(--text-200);
+    transition:  .3s;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3px;
 }
-.navegacion__enlace:hover{
+.navegacion__enlace svg{
+    width: 20px;
+}
+.navegacion__enlace:hover {
     color: var(--text-300);
+    fill: var(--text-300);
 }
