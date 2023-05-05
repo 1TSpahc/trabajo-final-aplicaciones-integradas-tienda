@@ -4,12 +4,12 @@ export function ProductosLista ({ productos }) {
   return (
     <>
       {
-                productos.map((producto) => {
-                  return (
-                    <Item key={producto.id} producto={producto} />
-                  )
-                })
-            }
+        productos.map((producto) => {
+          return (
+            <Item key={producto.id} producto={producto} />
+          )
+        })
+    }
     </>
   )
 }

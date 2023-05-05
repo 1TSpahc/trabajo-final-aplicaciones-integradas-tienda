@@ -1,4 +1,5 @@
 import { Cargando } from '../../componentes/cargando'
+import { Footer } from '../../componentes/footer'
 import { ProductosLista } from '../../componentes/productos/productosLista'
 import { Subtitulo } from '../../componentes/subtitulos'
 import { useProductos } from '../../hooks/useProductos'
@@ -17,11 +18,15 @@ export function Tienda () {
       cargando
         ? <Cargando />
         : (
-          <motion.div className='contenedor-tienda' initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }}>
-            <ProductosLista productos={productos} />
-          </motion.div>
+          <>
+            <motion.div className='contenedor-tienda' initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }}>
+              <ProductosLista productos={productos} />
+            </motion.div>
+            <Footer />
+          </>
           )
      }
+
     </>
   )
 }

@@ -3,7 +3,7 @@ import { guardarEnLocalStorage } from '../../utils'
 import { Cargando } from '../cargando'
 import { IconoEliminar } from '../iconos'
 
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export function CarritoItem ({ productoId, actualizarCarrito, carritoItems }) {
   const { cargando, productos } = useProductos()
@@ -24,9 +24,9 @@ export function CarritoItem ({ productoId, actualizarCarrito, carritoItems }) {
                 <motion.div className='carrito-item' initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} layoutId={productoId}>
                   <motion.div className='carrito__producto producto' initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }}>
                     <img src={buscarProducto?.producto_imagen} alt={buscarProducto?.producto_nombre} className='producto__img' />
-                    <div>
-                      <h4>{buscarProducto?.producto_nombre}</h4>
-                      <span>{buscarProducto?.producto_precio}</span>
+                    <div className='carrito__info'>
+                      <p className='carrito__info-nombre'>{buscarProducto?.producto_nombre}</p>
+                      <span className='carrito__info-precio'>s/{buscarProducto?.producto_precio}</span>
                     </div>
                   </motion.div>
                   <span className='carrito__eliminar' onClick={eliminarProductoDeCarrito}><IconoEliminar /></span>

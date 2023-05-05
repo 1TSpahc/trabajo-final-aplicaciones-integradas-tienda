@@ -26,10 +26,15 @@ width: 0;
 }
 .carrito__producto {
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
     gap: 10px;
 }
 .producto__img{
     width: 60px;
+}
+.carrito__info-nombre{
+    font-weight: 600;
 }
 .carrito__eliminar {
 cursor: pointer;

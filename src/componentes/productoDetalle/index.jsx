@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { guardarEnLocalStorage, obtenerDelLocalStorage } from '../../utils'
+import { IconoAgregado } from '../iconos'
 
 export function ProductoDetalle ({ buscarProducto }) {
   const [carrito, setCarrito] = useState(false)
@@ -48,9 +49,9 @@ export function ProductoDetalle ({ buscarProducto }) {
           {buscarProducto?.producto_categoria}
         </h4>
 
-        <button className='info__btn' onClick={agregarAlCarrito}>
+        <button className={`info__btn ${carrito ? 'info__btn-desactivar' : ''}`} onClick={agregarAlCarrito}>
           {
-            carrito ? 'Producto agregado' : 'Agregar al carrito'
+            carrito ? <IconoAgregado /> : 'Agregar al carrito'
           }
         </button>
       </div>

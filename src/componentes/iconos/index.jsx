@@ -1,3 +1,5 @@
+import './styles.css'
+
 export function IconoCasa () {
   return (
     <svg
@@ -44,6 +46,21 @@ export function IconoEliminar () {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
       <path d='M5.755 20.283 4 8h16l-1.755 12.283A2 2 0 0 1 16.265 22h-8.53a2 2 0 0 1-1.98-1.717ZM21 4h-5V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v1H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z' />
+    </svg>
+  )
+}
+
+export function IconoAgregado () {
+  return (
+    <svg
+      className='incono-agregado'
+      xmlns='http://www.w3.org/2000/svg'
+      viewBox='0 0 20 20'
+    >
+      <path
+        fillRule='evenodd'
+        d='M3 10a7 7 0 0 1 9.307-6.611 1 1 0 0 0 .658-1.889 9 9 0 1 0 5.98 7.501 1 1 0 0 0-1.988.22A7 7 0 1 1 3 10zm14.75-5.338a1 1 0 0 0-1.5-1.324l-6.435 7.28-3.183-2.593a1 1 0 0 0-1.264 1.55l3.929 3.2a1 1 0 0 0 1.38-.113l7.072-8z'
+      />
     </svg>
   )
 }
