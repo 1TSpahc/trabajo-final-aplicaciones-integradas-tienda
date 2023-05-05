@@ -5,6 +5,7 @@ import { obtenerDelLocalStorage } from '../../utils'
 import './styles.css'
 
 import { AnimatePresence, motion } from 'framer-motion'
+import { Enlace } from '../../componentes/enlace'
 
 export function Carrito () {
   const [carritoItems, setCarritoItems] = useState(() => {
@@ -31,6 +32,9 @@ export function Carrito () {
             )
         }
         </AnimatePresence>
+        {
+              carritoItems.length !== 0 ? <Enlace texto='Comprar' path='/finalizar' /> : ''
+        }
       </motion.section>
     </>
   )

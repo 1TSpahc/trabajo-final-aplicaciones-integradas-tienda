@@ -1,5 +1,6 @@
 
 .contenedor-tienda{
+    min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }

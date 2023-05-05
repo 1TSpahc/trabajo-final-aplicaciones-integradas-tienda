@@ -6,6 +6,7 @@ import { Inicio } from './paginas/inicio'
 import { Tienda } from './paginas/tienda'
 import { Detalles } from './paginas/detalles'
 import { Carrito } from './paginas/carrito'
+import { FinalizarCompra } from './paginas/finalizarCompra'
 
 function App () {
   return (
@@ -15,6 +16,7 @@ function App () {
       <Route path='/tienda' component={Tienda} />
       <Route path='/producto/:id' component={Detalles} />
       <Route path='/carrito' component={Carrito} />
+      <Route path='/finalizar' component={FinalizarCompra} />
     </>
   )
 }
