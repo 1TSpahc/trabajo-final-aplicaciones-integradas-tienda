@@ -1,0 +1,19 @@
+.contenedor{
+    padding: var(--padding-universal);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: 100vh;
+}
+
+.contenedor__titulo{
+    text-align: center;
+    font-weight: 600;
+}
+
+.contenedor__productos{
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0px;
+}

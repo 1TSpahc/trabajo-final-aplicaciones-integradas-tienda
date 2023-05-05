@@ -1,0 +1,22 @@
+
+.enlace{
+    width: 110px;
+
+    text-decoration: none;
+    color: var(--text-200);
+    transition: color .3s;
+
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: var(--accent-100);
+    color: var(--text-100);
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.enlace:hover{
+    color: var(--text-300);
+}

@@ -1,0 +1,7 @@
+import './styles.css'
+
+export function Subtitulo ({ children }) {
+  return (
+    <h2 className='subtitulo'>{children}</h2>
+  )
+}

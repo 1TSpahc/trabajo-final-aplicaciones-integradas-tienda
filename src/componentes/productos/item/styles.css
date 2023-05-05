@@ -1,0 +1,33 @@
+.item{
+    background-color: var(--bg-100);
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    text-decoration: none;
+}
+.item__imagen{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+.item__descripcion{
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-200);
+}
+
+.item:hover .item__descripcion{
+    text-decoration: underline;
+}
+.item__precio{
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    color: var(--text-300);
+}

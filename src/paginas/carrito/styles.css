@@ -1,0 +1,30 @@
+.seccion-carrito{
+    padding: 20px 0;
+    margin: 0 auto;
+    background-color: var(--bg-200);
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+}
+.carrito-productos{
+    padding-top: 20px;
+}
+.carrito-item{
+    width: 450px;
+    height: 90px;
+    border-radius: 4px;
+    background-color: var(--bg-100);
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.carrito__producto {
+    display: flex;
+    gap: 10px;
+}
+.producto__img{
+    width: 60px;
+}
