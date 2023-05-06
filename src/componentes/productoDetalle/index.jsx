@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { guardarEnLocalStorage, obtenerDelLocalStorage } from '../../utils'
+
 import { IconoAgregado } from '../iconos'
 
 export function ProductoDetalle ({ buscarProducto }) {

@@ -1,12 +1,11 @@
+import { motion } from 'framer-motion'
+import { useProductos } from '../../hooks/useProductos'
+
 import { Cargando } from '../../componentes/cargando'
 import { Footer } from '../../componentes/footer'
 import { ProductosLista } from '../../componentes/productos/productosLista'
 import { Subtitulo } from '../../componentes/subtitulos'
-import { useProductos } from '../../hooks/useProductos'
-
 import './styles.css'
-
-import { motion } from 'framer-motion'
 
 export function Tienda () {
   const { cargando, productos } = useProductos()

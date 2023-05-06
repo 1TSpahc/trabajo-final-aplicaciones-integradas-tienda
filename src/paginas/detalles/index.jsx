@@ -1,9 +1,9 @@
+import { motion } from 'framer-motion'
+import { useProductos } from '../../hooks/useProductos'
+
 import { Cargando } from '../../componentes/cargando'
 import { ProductoDetalle } from '../../componentes/productoDetalle'
-import { useProductos } from '../../hooks/useProductos'
 import './styles.css'
-
-import { motion } from 'framer-motion'
 
 export function Detalles ({ params }) {
   const { cargando, productos } = useProductos()

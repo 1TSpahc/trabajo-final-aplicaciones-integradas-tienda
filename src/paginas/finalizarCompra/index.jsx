@@ -1,7 +1,8 @@
+import confetti from 'canvas-confetti'
 import { useState } from 'react'
+
 import { Subtitulo } from '../../componentes/subtitulos'
 import { Cargando } from '../../componentes/cargando'
-import confetti from 'canvas-confetti'
 
 export function FinalizarCompra () {
   const [compra, setCompra] = useState(true)

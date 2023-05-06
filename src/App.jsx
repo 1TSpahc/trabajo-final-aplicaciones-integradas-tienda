@@ -1,12 +1,14 @@
 import { Route } from 'wouter'
 
-import './index.css'
 import { Cabecera } from './componentes/cabecera'
+
 import { Inicio } from './paginas/inicio'
 import { Tienda } from './paginas/tienda'
 import { Detalles } from './paginas/detalles'
 import { Carrito } from './paginas/carrito'
 import { FinalizarCompra } from './paginas/finalizarCompra'
+
+import './index.css'
 
 function App () {
   return (

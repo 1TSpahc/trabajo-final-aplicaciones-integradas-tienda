@@ -1,8 +1,7 @@
+import { motion } from 'framer-motion'
 import { Link } from 'wouter'
 
 import './styles.css'
-
-import { motion } from 'framer-motion'
 
 export function Item ({ producto }) {
   return (

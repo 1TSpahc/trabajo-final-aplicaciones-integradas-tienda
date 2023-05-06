@@ -1,6 +1,5 @@
-
-import './styles.css'
 import { Enlace } from '../enlace'
+import './styles.css'
 
 export function Banner () {
   return (

@@ -1,11 +1,12 @@
+import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
+
+import { obtenerDelLocalStorage } from '../../utils'
+
 import { CarritoItem } from '../../componentes/carritoItem'
 import { Subtitulo } from '../../componentes/subtitulos'
-import { obtenerDelLocalStorage } from '../../utils'
-import './styles.css'
-
-import { AnimatePresence, motion } from 'framer-motion'
 import { Enlace } from '../../componentes/enlace'
+import './styles.css'
 
 export function Carrito () {
   const [carritoItems, setCarritoItems] = useState(() => {

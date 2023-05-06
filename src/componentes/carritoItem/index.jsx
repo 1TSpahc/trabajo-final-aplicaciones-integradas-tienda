@@ -1,9 +1,9 @@
+import { motion } from 'framer-motion'
 import { useProductos } from '../../hooks/useProductos'
 import { guardarEnLocalStorage } from '../../utils'
+
 import { Cargando } from '../cargando'
 import { IconoEliminar } from '../iconos'
-
-import { motion } from 'framer-motion'
 
 export function CarritoItem ({ productoId, actualizarCarrito, carritoItems }) {
   const { cargando, productos } = useProductos()
@@ -12,6 +12,7 @@ export function CarritoItem ({ productoId, actualizarCarrito, carritoItems }) {
   const eliminarProductoDeCarrito = () => {
     const nuevosItems = [...carritoItems]
     const eliminarProducto = nuevosItems.filter((id) => id !== productoId)
+
     guardarEnLocalStorage('carrito', JSON.stringify(eliminarProducto))
     actualizarCarrito(eliminarProducto)
   }
